@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Obligatorio</title>
+  <script src="js/clases.js"></script>
+  <script src="js/codigo.js"></script>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+  <div id="contenedor">
+    <div id="cabezal" class="clearfix">
+      <img id="logo" src="img/empresa/Logo Obligatorio.jpg" alt="logo">
+      <ul id="navPrincipal">
+        <!-- MENU TIPO EMPRESA -->
+        <li>
+          <a id="mnuMostrarInicioE">Inicio</a>
+        </li>
+        <li>
+          <a id="mnuCrearViaje">Crear Viaje</a>
+        </li>
+        <li>
+          <a id="mnuManifiestoDeCarga">Manifiesto de Carga</a>
+        </li>
+        <li>
+          <a id="mnuConfirmarSolicitudDeCarga">Confirmar Solicitudes</a>
+        </li>
+        <li>
+          <a id="mnuHabilitarImportadores">Habilitar Importadores</a>
+        </li>
+        <li>
+          <a id="mnuRollover">Rollover</a>
+        </li>
+        <li>
+          <a id="mnuCargasPeligrosas">Cargas Peligrosas</a>
+        </li>
+        <li>
+          <a id="mnuCerrarSesionE">Cerrar Sesión</a>
+        </li>
+      </ul>
+      <ul id="navNormal">
+        <!-- MENU TIPO IMPORTADOR -->
+        <li>
+          <a id="mnuMostrarInicioI">Inicio</a>
+        </li>
+        <li>
+          <a id="mnuCrearSolicitud">Crear Solicitud</a>
+        </li>
+        <li>
+          <a id="mnuConsultarYCancelarSolicitudesPendientes">Consultar y Cancelar SP</a>
+        </li>
+        <li>
+          <a id="mnuEstadisticas">Ver Estadisticas</a>
+        </li>
+        <li>
+          <a id="mnuCerrarSesionI">Cerrar Sesión</a>
+        </li>
+      </ul>
+    </div><!-- FIN CABEZAL -->
+    <div id="contenido">
+      <div id="login">
+        <h3>Iniciar Sesión</h3>
+        <br>
+        <form>
+          Nombre de usuario:<br>
+          <input type="text" value="emp1" id="txtNombreLogin"><br>
+          Contraseña:<br>
+          <input type="password" value="Empresa1" id="txtContraseñaLogin"><br><br>
+          <input type="button" value="LOGIN" id="btnLogin">
+          <p id="mensajeLogin"></p>
+        </form>
+        <br><br>
+      </div><!-- FIN LOGIN -->
+
+      <div id="registro">
+        <h3>Registrarse</h3>
+        <br>
+        <form>
+          Nombre:<br>
+          <input type="text" id="txtNombreImportador"><br>
+          Nombre de usuario:<br>
+          <input type="text" id="txtNombreUsuarioImportador"><br>
+          Contraseña:<br>
+          <input type="password" id="txtContraseñaImportador"><br>
+          Subir foto:<br>
+          <input type="file" id="txtAltaFoto"><br><br>
+          <input type="button" value="REGISTRARSE" id="btnRegistrarse">
+          <p id="mensajeRegistro"></p>
+        </form>
+      </div><!-- FIN REGISTRO -->
+
+      <div id="empresa">
+        <div id="inicioEmpresa">
+          <h3>EMPRESA</h3>
+          <p id="mensajesLogueadoEmpresa"></p>
+          <br>
+          <hr>
+          <h3>Puerto de Montevideo</h3>
+          <p>
+          <h5>Información general</h5>
+          El puerto de Montevideo es el principal puerto comercial de Uruguay. Se ubica sobre el río de la Plata, en la<br>
+          bahía de la ciudad de Montevideo, en una importante zona de tránsito de cargas del Mercosur.<br><br>
+
+          El diseño del puerto de Montevideo está en constante evolución para la mejora de su infraestructura<br> 
+          y ampliar considerablemente su capacidad. En virtud de ello están en proceso varias obras dentro del recinto, en su
+          periferia y en otras zonas de la costa de la bahía de Montevideo.<br>
+          </p>
+          <img src="img/empresa/puertoMontevideo.jpg" alt="Logo Puerto de Montevideo" width="100%"><br>
+        </div>
+        <div id="crearViaje">
+          <h3>CREAR VIAJE</h3>
+          <br>
+          Ingrese nombre de buque:<br>
+          <input type="text" id="txtAltaNombreBuque"><br>
+          Ingrese cantidad maxima de contenedores:<br>
+          <input type="number" id="txtAltaCantidadContenedores"><br>
+          Ingrese Fecha de llegada en formato (AAAAMMDD):<br>
+          <input type="text" id="txtAltaFechaLlegada"> <br><br>
+          <input type="button" id="btnAltaViaje" value="Crear viaje"><br>
+          <p id="mensajesAltaViaje"></p>
+          <br><br>
+        </div><!-- FIN crearViaje -->
+
+        <div id="manifiestoDeCarga">
+          <h3>MANIFIESTO DE CARGA</h3>
+          <br>
+          <div id="manifiestoDeCargaContenido">
+            <select id="txtSelectManifiesto"></select>
+            <input type="button" value="Actualizar" id="btnActualizarManifiestoDeCarga"><br>
+
+            <div id="ListadoManifiestoDeCarga"></div>
+          </div>
+        </div><!-- FIN manifiestoDeCarga -->
+
+        <div id="confirmarSolicitudDeCarga">
+          <h3>CONFIRMAR SOLICITUD DE CARGA</h3>
+          <br>
+          <div id="selectsConfirmarSolicitudes">
+            Seleccionar viaje:<br>
+            <select id='txtSelectViaje'></select><br>
+            Seleccionar solicitud a confirmar:<br>
+            <select id='txtSelectSolicitud'></select><br><br>
+            <input type='button' id='btnConfirmarSolicitud' value='Confirmar solicitud'>
+          </div>
+          <p id="mensajeConfirmarSolicitudes"></p>
+        </div><!-- FIN confirmarSolicitudDeCarga -->
+
+        <div id="habilitarImportadores">
+          <h3>HABILITAR IMPORTADORES</h3>
+          <br>
+          <div id="ListadoHabilitarImportadores"></div>
+          <br>
+          <p id="mensajeHabilitarImportador"></p>
+        </div><!-- FIN habilitarImportadores -->
+        <br>
+
+        <div id="rollover">
+          <h3>ROLLOVER</h3><br>
+          <div id="selectsRollover">
+            Seleccionar solicitud confirmada:<br>
+            <select id="txtSelectRolloverSolicitudConfirmada"></select><br>
+            Seleccionar nuevo viaje:<br>
+            <select id="txtSelectRolloverNuevoViaje"></select><br><br>
+            <input id="btnRealizarRollover" type="button" value="Realizar rollover">
+            <p id="mensajeRollover"></p>
+          </div>
+        </div><!-- FIN rollover -->
+
+        <div id="cargasPeligrosas">
+          <h3>LISTA CARGAS PELIGROSAS</h3>
+          <br>
+          Seleccionar viaje:<br>
+          <select id="selectViajesCargaPeligrosa"></select><br>
+          <input type="button" id="btnMostrarListaCargaPeligrosa" value="Filtrar por carga peligrosa">
+          <br><br>
+          <div id="txtTablaCargaPeligrosa"></div>
+          <br><br>
+        </div><!-- FIN cargasPeligrosas -->
+
+      </div><!-- FIN EMPRESA -->
+
+      <div id="importador">
+        <div id="inicioImportador">
+          <h3>IMPORTADOR</h3>
+          <p id="mensajesLogueadoImportador"></p>
+          <br>
+          <hr>
+          <img src="img/empresa/hapag-lloyd.png" alt="Logo Hapag-Lloyd" width="20%"><br>
+          <p>
+          <h5>Conectando el mundo a través de los océanos de forma sustenable</h5>
+          La responsabilidad económica, ecológica y social no pueden separarse. Para nosotros, la sustentabilidad es una
+          parte integral del liderazgo de calidad en nuestra industria. <br>
+          Seguimos rigurosamente este camino. El tema de la sustentabilidad está anclado en nuestra estrategia
+          corporativa.<br>
+          </p>
+          <hr>
+          <img src="img/empresa/maersk-line.png" alt="Logo Maersk line" width="20%"><br>
+          <p>
+          <h5>Ahora embarcar es más fácil y eficiente</h5>
+          En un mundo con cambios constantes, hemos desarrollado una solución altamente adaptable a tus necesidades.<br>
+          Ahora podrás preprarar tu negocio para cualquier oportunidad de forma eficaz. Reserva tus embarques en
+          línea<br>
+          para saber cuándo llegarán. Es una forma más sencilla de transportar tu mercancía.<br>
+          </p>
+          <hr>
+          <img src="img/empresa/ocean-network-express.jpeg" alt="Logo Ocean Network Express" width="20%"><br>
+          <p>
+          <h5>UNO. Es nuestro nombre y nuestro propósito.</h5>
+          Junto con nuestros clientes y socios, enfrentaremos cada desafío como UNO, para descubrir y ofrecer soluciones
+          óptimas.<br>
+          Y, trabajando como UNO con el mundo, continuaremos uniendo países y regiones a través de nuestras actividades.
+          Nuestra creencia insuperable en el poder de UNO nos impulsa.<br>
+          Combinamos y refinamos diferentes formas de pensar, diferentes culturas y diferentes habilidades, dando vida a
+          una nueva forma de mover el mundo.<br>
+          El futuro del envío de contenedores está a la espera de ser explorado, y estamos ansiosos por explorar.
+          Como UNO, absolutamente podemos.<br>
+          </p>
+          <hr>
+          <img src="img/empresa/evergreen-marine.png" alt="Logo Evergreen Marine" width="20%"><br>
+          <p>
+          <h5>Obtención sostenible</h5>
+          Evergreen Shipping incorpora compras sostenibles en sus objetivos de responsabilidad social y desarrollo <br>
+          sostenible Para convertirse en un guardián de la tierra verde, respeta la protección del medio ambiente<br>
+          terrestre al comprar, ahorra consumo de energía, previene el cambio climático y mejora las condiciones<br>
+          laborales y sanitarias. . Los indicadores de desarrollo sostenible de la economía, la sociedad y el medio<br>
+          ambiente se han convertido en una consideración importante para las adquisiciones de Evergreen Marine.<br>
+          </p>
+        </div>
+        <div id="crearSolicitudDeCarga">
+          <h3>CREAR SOLICITUD DE CARGA DE MERCADERÍA</h3>
+          <br>
+          Tipo de mercadería:<br>
+          <select id="txtAltaTipoDeCargaI">
+            <option value="-1" disabled selected>Seleccionar</option>
+            <option value="CARGA_GENERAL">CARGA_GENERAL</option>
+            <option value="REFRIGERADO">REFRIGERADO</option>
+            <option value="CARGA_PELIGROSA">CARGA_PELIGROSA</option>
+          </select><br>
+          Descripción de mercadería:<br>
+          <textarea id="txtAltaDescripcionMercaderiaI"></textarea><br>
+          Puerto de origen:<br>
+          <input id="txtAltaPuertoOrigenI" type="text"><br>
+          Linea de carga de preferencia:<br>
+          <select id="txtAltaLineaDeCargaI"></select><br>
+          Cantidad de contenedores:<br>
+          <input id="txtCantidadDeContenedoresI" type="number">
+          <br><br>
+          <input type="button" id="btnAltaSolicitud" value="Crear solicitud">
+          <p id="mensajesAltaSolicitud"></p>
+
+        </div> <!-- FIN crearSolicitudDeCarga -->
+        <br>
+        <div id="consultarYCancelarSolicitudesPendientes">
+          <h3>SOLICITUDES PENDIENTES</h3>
+          Buscar por descripción de mercadería:<br>
+          <div id="listarSolicitudes">
+            <input type="text" id="txtBuscarPorDescripcionMercaderia">
+            <input type="button" value="Filtrar" id="btnFiltrarSolicitudesPendientes"><br><br>
+            <div id="tablaSolicitudesPendientes">
+            </div>
+          </div>
+          <br>
+          <h3>Cancelar Solicitud</h3>
+          ID de solicitud de carga a cancelar:<br>
+          <input type="number" id="txtCancelarSolicitud"><br><br>
+          <input type="button" value="Cancelar Solicitud" id="btnCancelarSolicitud">
+          <p id="mensajeCancelarSolicitud"></p>
+        </div><!-- FIN consultarYCancelarSolicitudesPendientes -->
+        <br>
+        <div id="estadisticas">
+          <h3>INFORMACIÓN ESTADÍSTICA</h3>
+          <div id="cargarEstadisticas">
+            <input type="button" id="btnActualizarEstadisticas" value="Actualizar"><br><br>
+            <table id="tablaEstadisticas"></table>
+          </div>
+        </div><!-- FIN estadisticas -->
+      </div><!-- FIN IMPORTADOR -->
+
+    </div><!-- FIN CONTENIDO -->
+
+    <div id="pie">
+      <a href="https://www.ort.edu.uy">Obligatorio - Agosto 2022 - Carrera Analista Programador - Grupo M1C</a><br>
+      Integrantes: <br>
+      Elias Molla - 306218 <br>
+      Ezequiel Calcagno - 285350 <br>
+    </div><!-- FIN PIE -->
+
+  </div><!-- FIN CONTENEDOR -->
+</body>
+
+</html>

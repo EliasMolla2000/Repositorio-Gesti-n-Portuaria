@@ -1,0 +1,172 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
+
+body {
+  font-family: 'Roboto Flex', sans-serif;
+  background-color: #757575;
+  background-image: url("http://127.0.0.1:5502/img/empresa/fondo.jpg");
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h5, h6 {
+  font-family: 'Roboto Flex', sans-serif;
+}
+
+h2 {
+  width: 60%;
+  float: left;
+  color: #fff;
+}
+
+h4 {
+  float: right;
+  font-weight: 400;
+  width: 30%;
+  margin-top: 26px;
+  text-align: right;
+  color: #fff;
+}
+
+table, th, td {
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  padding: 8px;
+  background-color: #f2f2f2;
+}
+
+table img, td>input[type=button] {
+  width: 100px;
+  min-width: 50px;
+}
+
+th {
+  background-color: #FF5733; /* Cambiado a rojo */
+  color: #fff;
+}
+
+#aux a, #navPrincipal a, #navNormal a {
+  color: #b03014; /* Cambiado a rojo */
+  text-decoration: none;
+}
+#aux a:hover, #navPrincipal a:hover, #navNormal a:hover {
+  
+  color: #663324; /* Color rojo más oscuro al pasar el ratón */
+}
+#contenedor {
+  width: 800px;
+  background-color: #fff;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+label {
+  min-width: 80px;
+  text-align: left;
+  display: inline-block;
+  vertical-align: top;
+  color: #333;
+}
+
+textarea {
+  min-height: 80px;
+}
+
+p.ver-mas {
+  text-align: center;
+  cursor: pointer;
+  font-weight: 700;
+  color: #210c08; /* Cambiado a rojo */
+}
+
+#logo {
+  margin: 20px;
+  float: left;
+  width: 100px;
+}
+
+#aux {
+  float: right;
+  clear: right;
+  padding: 0 24px 10px 0;
+}
+
+#navPrincipal, #navNormal {
+  float: right;
+  margin-top: 5px;
+  margin-right: 10px;
+  max-width: 400px;
+}
+
+#navPrincipal li, #navNormal li {
+  font-family: 'Roboto Flex', sans-serif;
+  list-style-type: none;
+  padding: 10px;
+  border-bottom: 2px solid #ddd;
+  margin: 5px;
+  float: left;
+}
+#navPrincipal li:hover, #navNormal li:hover {
+  background-color: #FF5733; /* Color rojo al pasar el ratón */
+}
+
+
+#cabezal {
+  background-color: #FF5733; /* Cambiado a rojo */
+  color: #fff;
+}
+
+#contenido {
+  padding: 20px;
+  float: left;
+}
+
+#contenido img {
+  max-width: 100%;
+  margin-bottom: 1%;
+}
+
+#lateral {
+  background-color: #efefef;
+  width: 290px;
+  float: left;
+  padding: 20px;
+}
+
+#lateral, #contenido {
+  min-height: 250px;
+}
+
+#pie {
+  background-color: #FF5733; /* Cambiado a rojo */
+  clear: both;
+  padding: 20px;
+  color: #fff;
+  font-size: 12px;
+}
+
+input, select, textarea {
+  background-color: #303036;
+  color: #fff;
+  border: 1px solid #ccc;
+  padding: 8px;
+  font-family: 'Roboto Flex', sans-serif;
+  min-width: 200px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+input[type="button"] {
+  background-color: #FF5733; /* Cambiado a rojo */
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+
+input[type="button"]:disabled {
+  background-color: #9696a1;
+  cursor: not-allowed;
+}
